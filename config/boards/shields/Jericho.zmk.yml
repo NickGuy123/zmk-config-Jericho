@@ -1,0 +1,12 @@
+file_format: "1"
+id: corne
+name: Jericho
+type: shield
+url: https://github.com/NickGuy123/zmk-config-Jericho.git
+requires: [pro_micro]
+exposes: [GPIO]
+features:
+  - keys
+siblings:
+  - corne_left
+  - corne_right

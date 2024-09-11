@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+// -----------------------------------------------------------------------------------------
+// | ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  | BSPC |
+// | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   |  |
+// | DEL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  "  |  \   |
+// | ALT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |   ?  |
+//                    | CTL | SPC | GUI | | SHFT | BSPC | ENT |
+                        bindings = <
+   &kp ESC   &kp N1   &kp N2   &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp ESC
+   &kp TAB   &kp Q    &kp W    &kp E     &kp R     &kp T       &kp Y     &kp U     &kp I     &kp O   &kp P    &kp PIPE
+   &kp DEL   &kp A    &kp S    &kp D     &kp F     &kp G       &kp H     &kp J     &kp K     &kp L   &kp DQT  &kp BSLH
+   &mo LALT  &kp Z    &kp X    &kp C     &kp V     &kp B       &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp QMARK
+                               &mo LCTRL &kp SPACE &kp LGUI    &mo RSHFT &kp BSPC  &kp ENT
+                        >;
+                };
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// |     | EXCL | AT | HASH|DLRR |PRCNT|   |CARET| AMPS | STAR|     |     |      |
+// |     |     |     |     |     |     |   |GRAVE| TILDE|UARW |     |     |      |
+// |     | LBRC| RBRC| LPAR| RPAR| LBKT|   | RBKT|LARW  |DARW |RARW |     |      |
+// |     |     |     |  <  |  >  |UNDER|   |MINUS| PLUS |EQUAL|     |     |      |
+//                    | CTL | SPC | GUI | | SHFT | BSPC | ENT | 
+                        bindings = <
+   &BT BT_SEL0 &kp EXCL   &kp AT   &kp N3    &kp HASH  &kp DLRR    &kp PRCNT &kp CARET &kp AMPS  &kp STAR  &trans &trans
+   &BT BT_SEL1 &trans     &ktrans  &trans    &trans    &trans      &kp GRAVE &kp TILDE &kp UARW  &trans    &trans &trans
+   &trans      &kp LBRC   &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT    &kp RBKT  &kp LARW  &kp DARW  &kp RARW  &trans &trans
+   &trans      &trans     &kp LT   &kp GT    &trans    &kp UNDER   &kp MINUS &kp PLUS  &kp EQUAL &trans    &trans &trans
+                                  &kp LCTRL &kp SPACE &kp LGUI    &kp RSHFT &kp BSPC  &kp ENT
+                        >;
+                };
+        };
+};

@@ -1,0 +1,16 @@
+if SHIELD_jericho_LEFT
+
+config ZMK_jericho
+    default "jericho"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_jericho_LEFT || SHIELD_jericho_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
