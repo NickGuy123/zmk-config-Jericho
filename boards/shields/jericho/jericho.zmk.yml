@@ -4,7 +4,6 @@ name: jericho
 type: shield
 url: https://github.com/NickGuy123/zmk-config-Jericho.git
 requires: [pro_micro]
-exposes: [GPIO]
 features:
   - keys
 siblings:
