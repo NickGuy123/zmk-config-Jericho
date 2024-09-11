@@ -1,6 +1,6 @@
 file_format: "1"
-id: corne
-name: Jericho
+id: jericho
+name: jericho
 type: shield
 url: https://github.com/NickGuy123/zmk-config-Jericho.git
 requires: [pro_micro]
@@ -8,5 +8,5 @@ exposes: [GPIO]
 features:
   - keys
 siblings:
-  - corne_left
-  - corne_right
+  - jericho_left
+  - jericho_right
