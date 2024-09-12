@@ -13,7 +13,4 @@ if SHIELD_jericho_LEFT || SHIELD_jericho_RIGHT
 config ZMK_SPLIT
     default y
 
-config_BT
-    default y
-
 endif
