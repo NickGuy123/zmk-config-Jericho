@@ -1,6 +1,6 @@
 if SHIELD_jericho_LEFT
 
-config ZMK_jericho
+config ZMK_KEYBOARD_NAME
     default "jericho"
 
 config ZMK_SPLIT_ROLE_CENTRAL
@@ -11,6 +11,9 @@ endif
 if SHIELD_jericho_LEFT || SHIELD_jericho_RIGHT
 
 config ZMK_SPLIT
+    default y
+
+CONFIG_BT
     default y
 
 endif
