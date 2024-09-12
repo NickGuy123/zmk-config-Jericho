@@ -29,11 +29,11 @@
 // |     |     |     |  <  |  >  |UNDER|   |MINUS| PLUS |EQUAL|     |     |      |
 //                    | CTL | SPC | GUI | | SHFT | BSPC | ENT | 
                         bindings = <
-   &bt BT_SEL 0 &kp EXCL   &kp AT   &kp POUND &kp DLRR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &trans   &trans &trans
-   &bt BT_SEL 1 &trans     &trans   &trans    &trans    &trans      &kp GRAVE &kp TILDE &kp UARW  &trans   &trans &trans
-   &trans       &kp LBRC   &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT    &kp RBKT  &kp LARW  &kp DARW  &kp RARW &trans &trans
-   &trans       &trans     &kp LT   &kp GT    &trans    &kp UNDER   &kp MINUS &kp PLUS  &kp EQUAL &trans   &trans &trans
-                                  &kp LCTRL &kp SPACE &kp LGUI    &kp RSHFT &kp BSPC  &kp ENT
+   &bt BT_SEL 0 &kp EXCL   &kp AT   &kp POUND &kp DOKLLAR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &trans   &trans &trans
+   &bt BT_SEL 1 &trans     &trans   &trans    &trans      &trans      &kp GRAVE &kp TILDE &kp UARW  &trans   &trans &trans
+   &trans       &kp LBRC   &kp RBRC &kp LPAR  &kp RPAR    &kp LBKT    &kp RBKT  &kp LARW  &kp DARW  &kp RARW &trans &trans
+   &trans       &trans     &kp LT   &kp GT    &trans      &kp UNDER   &kp MINUS &kp PLUS  &kp EQUAL &trans   &trans &trans
+                                    &kp LCTRL &kp SPACE   &kp LGUI    &kp RSHFT &kp BSPC  &kp ENT
                         >;
                 };
         };
