@@ -22,3 +22,5 @@ include:
     shield: jericho_left
   - board: nice_nano_v2
     shield: jericho_right
+  - board: nice_nano_v2
+    shield: settings_reset
