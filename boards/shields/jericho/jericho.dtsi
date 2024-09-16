@@ -10,7 +10,6 @@
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <4>;
-// 
         map = <
 RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)             RC(3,11) RC(3,10) RC(3,9) RC(3,8) RC(3,7) RC(3,6)
 RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)             RC(2,11) RC(2,10) RC(2,9) RC(2,8) RC(2,7) RC(2,6)
@@ -20,10 +19,22 @@ RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)             RC(0,11) RC(0,10) RC
         >;
     };
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        wakeup-source;
+    kscan0: kscan_composite {
+        compatible = "zmk,kscan-composite";
 
+        matrix {
+            kscan = <&kscan1>;
+        };
+
+        direct {
+            kscan = <&kscan2>;
+        };
+    };
+
+    kscan1: kscan_matrix{
+        compatible = "zmk,matrix-transform"
+        wakeup-source;
+        
         diode-direction = "col2row";
         row-gpios
             = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -31,11 +42,10 @@ RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)             RC(0,11) RC(0,10) RC
             , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
     };
-    kscan1: kscan_thumb {
+
+    kscan2: kscan_direct {
         compatible = "zmk,kscan-gpio-direct";
-        wakeup-source;
         input-gpios
             = <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
