@@ -1,0 +1,5 @@
+config SHIELD_jericho_LEFT
+    def_bool $(shields_list_contains,jericho_left)
+
+config SHIELD_jericho_RIGHT
+    def_bool $(shields_list_contains,jericho_right)

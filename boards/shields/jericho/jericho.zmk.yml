@@ -1,0 +1,11 @@
+file_format: "1"
+id: jericho
+name: jericho
+type: shield
+url: https://github.com/NickGuy123/zmk-config-Jericho.git
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - jericho_left
+  - jericho_right
